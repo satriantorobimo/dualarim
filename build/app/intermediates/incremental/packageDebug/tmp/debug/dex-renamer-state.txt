@@ -1,0 +1,4 @@
+#Wed Mar 25 17:35:19 WIB 2020
+base.0=/Users/bimo.satriantoro/Documents/bimos/myproject/flutter/dualarım/application/dualarim/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
