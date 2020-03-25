@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "689058257316",
+    "firebase_url": "https://dualirm.firebaseio.com",
+    "project_id": "dualirm",
+    "storage_bucket": "dualirm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:689058257316:android:e349f5ed2ce85fe6c38931",
+        "android_client_info": {
+          "package_name": "com.hwconsultant.dualarim.dualarim"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "689058257316-bs2583g9csc6osecp45fcb9jt7u3ple2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hwconsultant.dualarim.dualarim",
+            "certificate_hash": "4ac589d02b5b38f7be46d46a8d8b635a079fd745"
+          }
+        },
+        {
+          "client_id": "689058257316-k0ufui3o5i1ji2v5fkr20u63p7r8sgnl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGvuhIK5KSWjRzmf3biGl8yDpkyKHx1cc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "689058257316-k0ufui3o5i1ji2v5fkr20u63p7r8sgnl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
