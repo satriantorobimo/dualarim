@@ -1,6 +1,6 @@
+import 'package:catcher/catcher_plugin.dart';
 import 'package:dualarim/provider/dark_mode_provider.dart';
 import 'package:dualarim/theme/dark_mode_styles.dart';
-import 'package:dualarim/util/check_time.dart';
 import 'package:dualarim/util/routes.dart';
 import 'package:dualarim/util/string.dart';
 import 'package:flutter/material.dart';
@@ -8,10 +8,34 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(MyApp());
+  // runApp(MyApp());
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
   ]);
+
+  //debug configuration
+  final CatcherOptions debugOptions =
+      CatcherOptions(DialogReportMode(), [ConsoleHandler(), ToastHandler()]);
+
+  //release configuration
+  final CatcherOptions releaseOptions = CatcherOptions(DialogReportMode(), [
+    EmailManualHandler(['satriantoro.bimo@yahoo.com']),
+    ToastHandler()
+  ]);
+
+  //profile configuration
+  final CatcherOptions profileOptions = CatcherOptions(
+    DialogReportMode(),
+    [ConsoleHandler(), ToastHandler()],
+    handlerTimeout: 5000,
+    customParameters: {'app_sname': 'dualirm'},
+  );
+
+  //MyApp is root widget
+  Catcher(MyApp(),
+      debugConfig: debugOptions,
+      releaseConfig: releaseOptions,
+      profileConfig: profileOptions);
 }
 
 class MyApp extends StatefulWidget {
@@ -42,6 +66,7 @@ class _MyAppState extends State<MyApp> {
       child: Consumer<DarkModeProvider>(
         builder: (BuildContext context, value, Widget child) {
           return MaterialApp(
+            navigatorKey: Catcher.navigatorKey,
             debugShowCheckedModeBanner: false,
             theme: Styles.themeData(themeChangeProvider.darkMode, context),
             title: 'dualirm',

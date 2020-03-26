@@ -56,12 +56,13 @@ class _HomeScreenState extends State<HomeScreen> {
         centerTitle: true,
         actions: <Widget>[
           InkWell(
-            onTap: () {
-              if (themeChange.darkMode) {
-                themeChange.darkMode = false;
-              } else {
-                themeChange.darkMode = true;
-              }
+            onTap: () async {
+              // if (themeChange.darkMode) {
+              //   themeChange.darkMode = false;
+              // } else {
+              //   themeChange.darkMode = true;
+              // }
+              throw "Test exception";
             },
             child: themeChange.darkMode
                 ? Container(
